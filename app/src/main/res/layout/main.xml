@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0E14" 
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/bluetoothBatteryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="BT: --"
+        android:textColor="#3ABFF8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/counterSwitch"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="OFF"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp" />
+
+        <Spinner
+            android:id="@+id/mantraSpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/spinner_border" />
+
+        <ImageButton
+            android:id="@+id/renameMantraBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="#FBBF24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/batterySaverLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/batterySaverBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@android:drawable/ic_lock_idle_low_battery"
+            android:tint="#3ABFF8" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saver"
+            android:textColor="#3ABFF8"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ringContainer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+        <ProgressBar
+            android:id="@+id/pinkRing"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="1000"
+            android:progressDrawable="@drawable/pink_circle_ring" />
+        <ProgressBar
+            android:id="@+id/blueRing"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:max="108"
+            android:progressDrawable="@drawable/blue_circle_ring" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/counterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#3ABFF8"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+            <TextView
+                android:id="@+id/malaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mala: 0"
+                android:textColor="#60A5FA"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomControlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/historyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="3dp"
+                android:text="HISTORY"
+                android:backgroundTint="#A855F7"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/analysisBtn"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="3dp"
+                android:text="DATA"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/resetBtn"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_margin="3dp"
+                android:text="RESET"
+                android:backgroundTint="#EF4444"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/floatingModeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="3dp"
+                android:text="BUBBLE"
+                android:backgroundTint="#3ABFF8"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/settingsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="3dp"
+                android:text="SETTING"
+                android:backgroundTint="#FBBF24"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

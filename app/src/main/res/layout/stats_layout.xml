@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <LinearLayout
+        android:id="@+id/calendarSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <CalendarView android:id="@+id/historyCalendar" android:layout_width="match_parent" android:layout_height="320dp" android:theme="@android:style/Theme.DeviceDefault" />
+        <TextView android:id="@+id/selectedDateText" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="15dp" android:textColor="#2196F3" android:textStyle="bold" />
+        <TextView android:id="@+id/calendarSummary" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="15dp" android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/graphSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnDay" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Day" />
+            <Button android:id="@+id/btnMonth" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Month" />
+            <Button android:id="@+id/btnYear" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Year" />
+        </LinearLayout>
+        <TextView android:id="@+id/graphTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:gravity="center" android:padding="10dp" />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="250dp">
+            <LinearLayout android:id="@+id/graphCanvas" android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="bottom" android:padding="10dp" />
+        </HorizontalScrollView>
+        <TextView android:id="@+id/graphSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#4CAF50" android:padding="15dp" android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>
+
+
